@@ -11,15 +11,24 @@ function promptUser(){
         }
         userInput = parseInt(input);
         console.log(userInput);
+        drawGrid(userInput);
 
     } while (userInput < 10 || userInput > 100 || isNaN(userInput));
 }
 
+function drawGrid(userInput){
+    for (let index = 0; index < userInput; index++) {
+        const row = document.createElement('div')
+        for (let index = 0; index < userInput; index++) {
+            const square = document.createElement("div");
+            row.appendChild(square);
+            square.setAttribute("class", "square")
+   
+        }
+        container.appendChild(row);
+    }
+}
 document.addEventListener("DOMContentLoaded", function() {
-
 const container = document.querySelector("#container");
-const square = document.createElement("div");
-container.appendChild(square);
-square.setAttribute("class", "square");
-
+drawGrid(userInput);
 });
