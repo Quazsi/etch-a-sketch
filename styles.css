@@ -1,5 +1,19 @@
+body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
 .square {
     height: 50px;
     width: 50px;
     background-color: blue;
 }
+
