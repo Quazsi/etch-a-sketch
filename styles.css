@@ -8,12 +8,16 @@ body {
 
 #container {
     display: flex;
+    max-width: 1000px;
     flex-direction: row;
+    gap: 1px;
+    flex-shrink: 1;
 }
 
 .square {
     height: 50px;
     width: 50px;
+    margin-top: 1px;
     background-color: blue;
 }
 
