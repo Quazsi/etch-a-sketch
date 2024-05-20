@@ -3,10 +3,16 @@ let userInput = 10;
 function promptUser(){
     let message = "What size of grid would you like? (MIN 10) (Max 100)"
     do {
-        userInput = prompt(message, 10)
+        input = prompt(message, 10)
+        // If user clicks cancel, exit the window
+        if(input === null){
+            console.log("Cancelled");
+            return;
+        }
+        userInput = parseInt(input);
         console.log(userInput);
-        userInput = parseInt(userInput);
-    } while (userInput <= 10 || userInput >= 100 || isNaN(userInput));
+
+    } while (userInput < 10 || userInput > 100 || isNaN(userInput));
 }
 
 document.addEventListener("DOMContentLoaded", function() {
