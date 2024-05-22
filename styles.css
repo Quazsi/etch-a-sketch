@@ -9,15 +9,15 @@ body {
 #container {
     display: flex;
     max-width: 1000px;
+    max-height: 1000px;
     flex-direction: row;
     gap: 1px;
-    flex-shrink: 1;
 }
-
+/* Add flex shrink to the squares with a max dimension
+*/
 .square {
-    height: 50px;
-    width: 50px;
     margin-top: 1px;
-    background-color: blue;
+    background-color: black;
+    flex: 1;
 }
 
