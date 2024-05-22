@@ -18,10 +18,13 @@ function promptUser(){
 
 function drawGrid(userInput){
     container.innerHTML = '';
+    squareSize = (600 - userInput) / userInput;
     for (let index = 0; index < userInput; index++) {
         const row = document.createElement('div')
         for (let index = 0; index < userInput; index++) {
             const square = document.createElement("div");
+            square.style.width = squareSize + 'px';
+            square.style.height = squareSize + 'px';
             row.appendChild(square);
             square.setAttribute("class", "square")
    
