@@ -17,6 +17,7 @@ function promptUser(){
 }
 
 function drawGrid(userInput){
+    container.innerHTML = '';
     for (let index = 0; index < userInput; index++) {
         const row = document.createElement('div')
         for (let index = 0; index < userInput; index++) {
