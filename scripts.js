@@ -33,6 +33,17 @@ function drawGrid(userInput){
     }
 }
 document.addEventListener("DOMContentLoaded", function() {
-const container = document.querySelector("#container");
-drawGrid(userInput);
+    const container = document.querySelector("#container");
+    drawGrid(userInput);
+
+    const squares = document.querySelectorAll('.square');
+
+    // Event delegation on the container for the squares
+    container.addEventListener('mouseover', function(event) {
+        // Check if the mouseover event occurred on a square element
+        if (event.target.classList.contains('square')) {
+            // Change background color of the square
+            event.target.style.backgroundColor = 'red';
+    }
+});
 });
