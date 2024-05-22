@@ -53,8 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
     container.addEventListener('mouseover', function(event) {
         // Check if the mouseover event occurred on a square element
         if (event.target.classList.contains('square')) {
+            const randomColor = getRandomColor();
             // Change background color of the square
-            event.target.style.backgroundColor = 'red';
+            event.target.style.backgroundColor = randomColor;
     }
 });
+
+
 });
